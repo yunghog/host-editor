@@ -1,11 +1,10 @@
-#dont print comment
-hello nigga
-hello bih
-hello brudda
-#dont print comment
-how you doin
-
-
-127.0.0.1	hello127.0.0.1	niggamynigga127.0.0.1	fyuga
-127.0.0.1	fuend=''
-127.0.0.1	gafu
+#DONT MANIPULATE COMMENTS
+#hello
+#blank bih
+127.0.0.1	homie
+127.0.0.1	nigga
+#bih
+127.0.0.1	brudda
+127.0.0.1	mynigga
+127.0.0.1	jigga
+127.0.0.1	AIUSFKULHererere

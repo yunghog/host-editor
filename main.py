@@ -1,6 +1,8 @@
 #w3b13locker by Samartha
 import sys
-hostsFile=r'hosts.txt'
+import config as c
+#hostsFile=r'hosts.txt'
+hostsFile=c.config()
 def searchDomain(dom):
     flag=0
     index=0
@@ -8,7 +10,8 @@ def searchDomain(dom):
     dList=sHosts.read().split('\n')
     for lines in dList:
         if '#' not in lines and lines!='\n' and lines!='':
-            xDom=lines.split('\t')
+            xDom=lines.split(' ')
+            # print(xDom)
             if dom == xDom[1]:
                 flag=1
                 break
@@ -47,7 +50,7 @@ if argc==3 :
         else:
             wHost=open(hostsFile,'a')
             wHost.write('\n')
-            block='127.0.0.1\t' + domain
+            block='127.0.0.1 ' + domain
             wHost.write(block)
             wHost.close()
     elif option=='-ub' or option=='--unblock' :
@@ -61,16 +64,16 @@ if argc==3 :
                 if '#' in dom :
                     wHost.write(dom+'\n')
                 if '#' not in dom and dom!='\n' and dom!='':
-                     xDom=dom.split('\t')
+                     xDom=dom.split(' ')
                      if domain!=xDom[1]:
-                         wHost.write(xDom[0]+'\t'+xDom[1]+'\n')
+                         wHost.write(xDom[0]+' '+xDom[1]+'\n')
             wHost.close()
         else:
             print(domain , ' domain is not in the hosts')
     elif option=='-s' or option=='--search' :
         index=searchDomain(domain)
         if index>=0:
-            wHost=open(hostsFile,'r+')
+            wHost=open(hostsFile,'r')
             x=wHost.read().split('\n')
             print(domain , 'is present at line ' ,index+1,'\n', x[index])
             wHost.close()
