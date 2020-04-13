@@ -2,4 +2,15 @@ option              arguments         action
 -b/--block        domain name       blocking
 -ub/--unblock     domain name       unblocking
 -l/--list         none              list already blocked doomains
--s/--search       domain name       find out if the domain is blocked 
+-s/--search       domain name       find out if the domain is blocked
+
+note :
+# launch the command prompt in administrator mode
+# please make a backup of orginal hosts file before running webBlocker
+  hosts can be found in "C:\Windows\System32\drivers\etc" (if windows is installed in c drive)
+
+example:
+# python main.py -b www.instagram.com
+this will block instagram website
+#python main.py -ub www.instagram.com
+this will unblock instagram website
