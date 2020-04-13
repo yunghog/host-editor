@@ -1,6 +1,20 @@
 #w3b13locker by Samartha
 import sys
 hostsFile=r'hosts.txt'
+def searchDomain(dom):
+    flag=0
+    index=-1
+    sHosts = open(hostsFile,'r')
+    for line in sHosts:
+        if dom in line:
+            flag=1
+            break
+        index+=1
+    sHosts.close()
+    if flag==1:
+        return index
+    else:
+        return -1
 # rHost=open(r'hosts.txt','r')
 argc = len(sys.argv)
 if argc>1 and argc<=4 :
@@ -30,5 +44,19 @@ if argc==3 :
         block='127.0.0.1\t' + domain
         wHost.write(block)
         wHost.close()
+    elif option=='-ub' or option=='--unblock' :
+        index=searchDomain(domain)
+        if index>=0:
+            wHost=open(hostsFile,'r+')
+            # x=wHost.read().split('\n')
+            x=wHost.readline()
+            print(x)
+            wHost.close()
+    elif option=='-s' or option=='--search' :
+        index=searchDomain(domain)
+        if index>=0:
+            wHost=open(hostsFile,'r+')
+            x=wHost.read().split('\n')
+            print(x)
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
