@@ -3,12 +3,15 @@ import sys
 hostsFile=r'hosts.txt'
 def searchDomain(dom):
     flag=0
-    index=-1
+    index=0
     sHosts = open(hostsFile,'r')
-    for line in sHosts:
-        if dom in line:
-            flag=1
-            break
+    dList=sHosts.read().split('\n')
+    for lines in dList:
+        if '#' not in lines and lines!='\n' and lines!='':
+            xDom=lines.split('\t')
+            if dom == xDom[1]:
+                flag=1
+                break
         index+=1
     sHosts.close()
     if flag==1:
@@ -39,24 +42,39 @@ if argc==2 :
         print('Invalid argument\nUse -h/--help to display valid options')
 if argc==3 :
     if option=='-b' or option=='--block' :
-        wHost=open(hostsFile,'a')
-        wHost.write('\n')
-        block='127.0.0.1\t' + domain
-        wHost.write(block)
-        wHost.close()
+        if searchDomain(domain)>=0:
+            print(domain, ' is already blocked')
+        else:
+            wHost=open(hostsFile,'a')
+            wHost.write('\n')
+            block='127.0.0.1\t' + domain
+            wHost.write(block)
+            wHost.close()
     elif option=='-ub' or option=='--unblock' :
         index=searchDomain(domain)
         if index>=0:
-            wHost=open(hostsFile,'r+')
-            # x=wHost.read().split('\n')
-            x=wHost.readline()
-            print(x)
+            rHost=open(hostsFile,'r')
+            dList=rHost.read().split('\n')
+            rHost.close()
+            wHost=open(hostsFile,'w')
+            for dom in dList:
+                if '#' in dom :
+                    wHost.write(dom+'\n')
+                if '#' not in dom and dom!='\n' and dom!='':
+                     xDom=dom.split('\t')
+                     if domain!=xDom[1]:
+                         wHost.write(xDom[0]+'\t'+xDom[1]+'\n')
             wHost.close()
+        else:
+            print(domain , ' domain is not in the hosts')
     elif option=='-s' or option=='--search' :
         index=searchDomain(domain)
         if index>=0:
             wHost=open(hostsFile,'r+')
             x=wHost.read().split('\n')
-            print(x)
+            print(domain , 'is present at line ' ,index+1,'\n', x[index])
+            wHost.close()
+        else:
+            print(domain , ' domain is not in the hosts')
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
