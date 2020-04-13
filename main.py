@@ -23,3 +23,12 @@ if argc==2 :
         print('all the possible option combinations !!')
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
+if argc==3 :
+    if option=='-b' or option=='--block' :
+        wHost=open(hostsFile,'a')
+        wHost.write('\n')
+        block='127.0.0.1\t' + domain
+        wHost.write(block)
+        wHost.close()
+    else:
+        print('Invalid argument\nUse -h/--help to display valid options')

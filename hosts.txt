@@ -4,3 +4,8 @@ hello bih
 hello brudda
 #dont print comment
 how you doin
+
+
+127.0.0.1	hello127.0.0.1	niggamynigga127.0.0.1	fyuga
+127.0.0.1	fuend=''
+127.0.0.1	gafu
