@@ -1,0 +1,7 @@
+-----------UPDATES-----------
+
+# w3b13locker beta v0.1 :
+  - blocking, unblocking, listimg and searching domains in hosts file
+  - working with 'space' separated host file (i.e, ip address and domains separated by
+    single space. Not tabs)
+  - configured for windows
