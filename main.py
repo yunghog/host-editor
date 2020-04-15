@@ -1,8 +1,8 @@
 #w3b13locker by Samartha
 import sys
 import config as c
-hostsFile=r'hosts.txt'
-#hostsFile=c.config()
+#hostsFile=r'hosts.txt'
+hostsFile=c.config()
 def searchDomain(dom):
     flag=0
     index=0
