@@ -10,7 +10,7 @@
 +----------------+------------------+-------------------------------------+
 | -b/--block     |   domain name    |   blocking                          |
 | -ub/--unblock  |   domain name    |   unblocking                        |
-| -l/--list      |   none           |   list already blocked doomains     |
+| -l/--list      |   none           |   list already blocked domains      |
 | -s/--search    |   domain name    |   find out if the domain is blocked |
 +----------------+------------------+-------------------------------------+
 
