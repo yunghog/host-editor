@@ -7,3 +7,16 @@
   - configured for windows
   * bugs
     - fails if domain and ip are separated by tab '\t'
+
+# w3b13locker beta v0.2 :
+  - setup.py will modify hosts file as required for the operation
+  - data/path.txt will hold the os name and hosts file location
+  - backup of the orginal hosts file will be automatically created @ data/hostsOriginal.txt
+  - configured for windows and linux
+  * bugs
+    - incompatible with mac os
+    - running setup.py after modifying the hosts will overwrite the backup with modified
+      version of the hosts file
+  * bugs fixed
+    - works on linux os
+    - hosts file with domains separated by '\t' problem resolved

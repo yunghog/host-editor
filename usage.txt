@@ -1,16 +1,21 @@
-option              arguments         action
--b/--block        domain name       blocking
--ub/--unblock     domain name       unblocking
--l/--list         none              list already blocked doomains
--s/--search       domain name       find out if the domain is blocked
+1.setup.py :
+# run setup.py with administrator permissions
+  --- python setup.py
+  * setup.py script will create a backup of hosts file and modify it making it
+    suitable for operation
 
-note :
-# launch the command prompt in administrator mode
-# please make a backup of orginal hosts file before running webBlocker
-  hosts can be found in "C:\Windows\System32\drivers\etc" (if windows is installed in c drive)
+2.main.py :
++----------------+------------------+-------------------------------------+
+|  option        |     arguments    |     action                          |
++----------------+------------------+-------------------------------------+
+| -b/--block     |   domain name    |   blocking                          |
+| -ub/--unblock  |   domain name    |   unblocking                        |
+| -l/--list      |   none           |   list already blocked doomains     |
+| -s/--search    |   domain name    |   find out if the domain is blocked |
++----------------+------------------+-------------------------------------+
 
-example:
-# python main.py -b www.instagram.com
-this will block instagram website
-#python main.py -ub www.instagram.com
-this will unblock instagram website
+# launch the python console in administrator mode
+  --- python main.py -b www.instagram.com
+  * this will block instagram website
+  --- python main.py -ub www.instagram.com
+  * this will unblock instagram website

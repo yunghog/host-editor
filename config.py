@@ -12,4 +12,3 @@ def config() :
     pathFile=open(r'data/path.txt','w')
     pathFile.write('operatingSystem|'+myos+'\n'+'hosts|'+hostPath+'\n')
     return hostPath
-config()
