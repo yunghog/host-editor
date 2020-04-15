@@ -5,3 +5,5 @@
   - working with 'space' separated host file (i.e, ip address and domains separated by
     single space. Not tabs)
   - configured for windows
+  * bugs
+    - fails if domain and ip are separated by tab '\t'
