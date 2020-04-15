@@ -11,8 +11,8 @@
 
 > Beta Build v0.2
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
-[![Dependency Status](http://img.shields.io/gemnasium/doge/wow.svg)](https://github.com/yunghog/w3bsite13locker)
+[![Build Status](https://img.shields.io/badge/version-v0.2-green)](https://github.com/yunghog/w3bsite13locker)
+[![Python](https://img.shields.io/badge/python-3.7-orange)](https://github.com/yunghog/w3bsite13locker)
 
 # Table of Contents
 - [Requirements](#requirements)
