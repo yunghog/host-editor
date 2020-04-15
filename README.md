@@ -114,8 +114,8 @@ python main.py -unblock [domain]
 
 ```
 ## Snapshot
-###Sample run `main.py`
-<img src="image/snap1.png" title="FVCproductions" alt="FVCproductions">
+### Sample run `main.py`
+<img src="image/snap1.PNG" title="w3b13locker" alt="w3b13locker">
 
 ## Support
 - This section will be updated soon
