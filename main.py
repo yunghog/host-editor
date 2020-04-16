@@ -1,6 +1,8 @@
 #w3b13locker by Samartha
 import sys
+import os
 import config as c
+import logger as l
 #hostsFile=r'hosts.txt'
 hostsFile=c.config()
 def searchDomain(dom):
@@ -21,7 +23,6 @@ def searchDomain(dom):
         return index
     else:
         return -1
-# rHost=open(r'hosts.txt','r')
 argc = len(sys.argv)
 if argc>1 and argc<=4 :
     option = sys.argv[1]
@@ -34,13 +35,32 @@ else:
     print('Invalid set of arguments\nUse -h/--help to display valid options')
 if argc==2 :
     if option=='-l' or option=='--list' :
+        os.system('cls')
+        print('------------hosts-------------')
         rHost=open(hostsFile,'r')
         for line in rHost :
             if line[0] != '#' :
                 print(line, end='')
         rHost.close();
     elif option=='-h' or option=='--help' :
-        print('all the possible option combinations !!')
+        os.system('cls')
+        help='''Usage: python main.py [option] [arguments]
+        python main.py [-b/-ub/-s/-h/l/--block/--unblock/--search/--list/--help] *[-f/--file] *[domain/domain list]\n
++----------------+-----------------------------------------------+
+| option         | description                                   |
++----------------+-----------------------------------------------+
+| -b/--block     | blocks the domain. takes domain as argument   |
+| -ub/--unblock  | unblocks the domain. takes doamin as argument |
+| -s/--search    | search for a domain. takes domain as argument |
+| -l/--list      | list blocked domain                           |
+| -f/--file      | used along with -b/--block or -ub/--unblock.  |
+|                | takes domain list                             |
++----------------+-----------------------------------------------+
+                 ----------w3b13locker----------
+                    ---stable build v1.0---
+                        --by Samartha--
+'''
+        print(help)
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
 if argc==3 :
@@ -48,26 +68,36 @@ if argc==3 :
         if searchDomain(domain)>=0:
             print(domain, ' is already blocked')
         else:
-            wHost=open(hostsFile,'a')
-            wHost.write('\n')
-            block='127.0.0.1 ' + domain
-            wHost.write(block)
-            wHost.close()
+            try:
+                wHost=open(hostsFile,'a')
+                wHost.write('\n')
+                block='127.0.0.1 ' + domain
+                wHost.write(block)
+                wHost.close()
+                l.log('blocked_'+domain)
+            except PermissionError :
+                l.log('failed_to_block_'+domain+'_Error:Access denied')
+                print('Failed! Access denied! Open console with admin rights')
     elif option=='-ub' or option=='--unblock' :
         index=searchDomain(domain)
         if index>=0:
-            rHost=open(hostsFile,'r')
-            dList=rHost.read().split('\n')
-            rHost.close()
-            wHost=open(hostsFile,'w')
-            for dom in dList:
-                if '#' in dom :
-                    wHost.write(dom+'\n')
-                if '#' not in dom and dom!='\n' and dom!='':
-                     xDom=dom.split(' ')
-                     if domain!=xDom[1]:
-                         wHost.write(xDom[0]+' '+xDom[1]+'\n')
-            wHost.close()
+            try:
+                rHost=open(hostsFile,'r')
+                dList=rHost.read().split('\n')
+                rHost.close()
+                wHost=open(hostsFile,'w')
+                for dom in dList:
+                    if '#' in dom :
+                        wHost.write(dom+'\n')
+                    if '#' not in dom and dom!='\n' and dom!='':
+                         xDom=dom.split(' ')
+                         if domain!=xDom[1]:
+                             wHost.write(xDom[0]+' '+xDom[1]+'\n')
+                wHost.close()
+                l.log('unblocked_'+domain)
+            except PermissionError :
+                l.log('failed_to_unblock_'+domain+'_Error:Access denied')
+                print('Failed! Access denied! Open console with admin rights')
         else:
             print(domain , ' domain is not in the hosts')
     elif option=='-s' or option=='--search' :

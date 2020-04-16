@@ -1,20 +1,20 @@
 <a href=""><img src="image/w3b13locker.jpg" title="w3b13locker" alt="w3b13locker"></a>
 # w3bsite 13locker
-`beta build v0.2`
+`beta build v0.3`
 ### web blocker | w3b13locker | website blocker
 
-> Block inapropriate websites and ads by their domain
+> Block inappropriate websites and ads by their domain
 
 > CommandLine application
 
 > Build with python 3.7
 
-> Beta Build v0.2
+> Beta Build v0.3
 
-[![Build Status](https://img.shields.io/badge/version-v0.2-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
+[![Build Status](https://img.shields.io/badge/version-v0.3-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
 [![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
 
-# Table of Contents
+## Table of Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Features](#features)
@@ -34,7 +34,7 @@
  ```shell
 git clone https://github.com/yunghog/w3bsite13locker.git
 ```
-### Setting up 
+### Setting up
 - open a command prompt/terminal with admin rights (*run as administrator) or a python console inside the cloned directory
 - run setup.py using command
 ```shell
@@ -45,19 +45,20 @@ python setup.py
 - Working with hosts file
 - Compatible on Windows and Linux machines
 - Lightweight python script
+- Log file to keep track of hosts
 - Easy to handle
 
 ## Usage
 - To block any domain use command (*without '[' ']' around domain name)
 ```shell
 python main.py -b [domain]
-python main.py -block [domain]
+python main.py --block [domain]
 ```
 
 - To unblock any domain use command (*without '[' ']' around domain name)
 ```shell
 python main.py -ub [domain]
-python main.py -unblock [domain]
+python main.py --unblock [domain]
 ```
 > For full usage refer usage.txt
 - `usage.txt`
@@ -76,6 +77,7 @@ python main.py -unblock [domain]
 | -ub/--unblock  |   domain name    |   unblocking                        |
 | -l/--list      |   none           |   list already blocked domains      |
 | -s/--search    |   domain name    |   find out if the domain is blocked |
+| -h/--help      |   none           |   list all possible commands        |
 +----------------+------------------+-------------------------------------+
 
 # launch the python console in administrator mode
@@ -111,6 +113,9 @@ python main.py -unblock [domain]
   * bugs fixed
     - works on linux os
     - hosts file with domains separated by '\t' problem resolved
+# w3b13locker beta v0.3 :
+  - compatible on mac os
+  - working log file @ data/log.ini which holds all logs
 
 ```
 ## Snapshot
@@ -128,6 +133,3 @@ python main.py -unblock [domain]
   - 🍴 Fork this repo!
   - 👯 Clone this repo to your local machine using `https://github.com/yunghog/w3bsite13locker.git`
   - Pull requests
-
-
-

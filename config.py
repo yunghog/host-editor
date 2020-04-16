@@ -7,7 +7,7 @@ def config() :
     if myos=='Windows':
         windir=os.environ['windir']
         hostPath=windir+r'\system32\drivers\etc\hosts'
-    if myos=='Linux':
+    if myos=='Linux' or myos=='Darwin':
         hostPath=r'/etc/hosts'
     pathFile=open(r'data/path.txt','w')
     pathFile.write('operatingSystem|'+myos+'\n'+'hosts|'+hostPath+'\n')
