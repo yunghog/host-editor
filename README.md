@@ -3,7 +3,7 @@
 `beta build v0.3`
 ### web blocker | w3b13locker | website blocker
 
-> Block inapropriate websites and ads by their domain
+> Block inappropriate websites and ads by their domain
 
 > CommandLine application
 
@@ -52,13 +52,13 @@ python setup.py
 - To block any domain use command (*without '[' ']' around domain name)
 ```shell
 python main.py -b [domain]
-python main.py -block [domain]
+python main.py --block [domain]
 ```
 
 - To unblock any domain use command (*without '[' ']' around domain name)
 ```shell
 python main.py -ub [domain]
-python main.py -unblock [domain]
+python main.py --unblock [domain]
 ```
 > For full usage refer usage.txt
 - `usage.txt`
@@ -77,6 +77,7 @@ python main.py -unblock [domain]
 | -ub/--unblock  |   domain name    |   unblocking                        |
 | -l/--list      |   none           |   list already blocked domains      |
 | -s/--search    |   domain name    |   find out if the domain is blocked |
+| -h/--help      |   none           |   list all possible commands        |
 +----------------+------------------+-------------------------------------+
 
 # launch the python console in administrator mode
