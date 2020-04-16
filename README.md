@@ -11,8 +11,8 @@
 
 > Beta Build v0.2
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
-[![Dependency Status](http://img.shields.io/gemnasium/doge/wow.svg)](https://github.com/yunghog/w3bsite13locker)
+[![Build Status](https://img.shields.io/badge/version-v0.2-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
+[![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
 
 # Table of Contents
 - [Requirements](#requirements)
@@ -34,7 +34,7 @@
  ```shell
 git clone https://github.com/yunghog/w3bsite13locker.git
 ```
-### Setting up 
+### Setting up
 - open a command prompt/terminal with admin rights (*run as administrator) or a python console inside the cloned directory
 - run setup.py using command
 ```shell
@@ -128,6 +128,3 @@ python main.py -unblock [domain]
   - 🍴 Fork this repo!
   - 👯 Clone this repo to your local machine using `https://github.com/yunghog/w3bsite13locker.git`
   - Pull requests
-
-
-
