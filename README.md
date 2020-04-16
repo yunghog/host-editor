@@ -1,6 +1,6 @@
 <a href=""><img src="image/w3b13locker.jpg" title="w3b13locker" alt="w3b13locker"></a>
 # w3bsite 13locker
-`beta build v0.2`
+`beta build v0.3`
 ### web blocker | w3b13locker | website blocker
 
 > Block inapropriate websites and ads by their domain
@@ -9,9 +9,9 @@
 
 > Build with python 3.7
 
-> Beta Build v0.2
+> Beta Build v0.3
 
-[![Build Status](https://img.shields.io/badge/version-v0.2-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
+[![Build Status](https://img.shields.io/badge/version-v0.3-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
 [![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
 
 # Table of Contents
@@ -45,6 +45,7 @@ python setup.py
 - Working with hosts file
 - Compatible on Windows and Linux machines
 - Lightweight python script
+- Log file to keep track of hosts
 - Easy to handle
 
 ## Usage
@@ -111,6 +112,9 @@ python main.py -unblock [domain]
   * bugs fixed
     - works on linux os
     - hosts file with domains separated by '\t' problem resolved
+# w3b13locker beta v0.3 :
+  - compatible on mac os
+  - working log file @ data/log.ini which holds all logs
 
 ```
 ## Snapshot
