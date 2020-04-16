@@ -14,7 +14,7 @@
 [![Build Status](https://img.shields.io/badge/version-v0.3-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
 [![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
 
-# Table of Contents
+## Table of Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Features](#features)
