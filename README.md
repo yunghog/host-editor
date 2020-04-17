@@ -13,6 +13,8 @@
 
 [![Build Status](https://img.shields.io/badge/version-v0.3-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
 [![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
+[![Donate](https://img.shields.io/badge/Paypal-Donate-blue?style=flat-square&logo=paypal)](https://paypal.me/samartha890?locale.x=en_GB)
+
 
 ## Table of Contents
 - [Requirements](#requirements)
