@@ -123,7 +123,8 @@ python main.py --unblock [domain]
 <img src="image/snap1.PNG" title="w3b13locker" alt="w3b13locker">
 
 ## Support
-- This section will be updated soon
+- [Buy me a coffee ☕🍪](https://paypal.me/samartha890?locale.x=en_GB)
+- [Help me to contribute more !](https://paypal.me/samartha890?locale.x=en_GB)
 
 ## Contributing
 
