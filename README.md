@@ -1,7 +1,7 @@
 <a href=""><img src="image/w3b13locker.jpg" title="w3b13locker" alt="w3b13locker"></a>
 # w3bsite 13locker
 `beta build v0.3`
-### web blocker | w3b13locker | website blocker
+### web blocker | w3b13locker | website blocker | hosts editor
 
 > Block inappropriate websites and ads by their domain
 
