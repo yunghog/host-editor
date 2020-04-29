@@ -3,8 +3,8 @@ import sys
 import os
 import config as c
 import logger as l
-#hostsFile=r'hosts.txt'
-hostsFile=c.config()
+hostsFile=r'hosts.txt'
+# hostsFile=c.config()
 def searchDomain(dom):
     flag=0
     index=0
@@ -111,3 +111,23 @@ if argc==3 :
             print(domain , ' domain is not in the hosts')
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
+if argc==4:
+    if option=='-b' or option=='--block' and option2=='-f' or option2=='--file' :
+        try:
+            wHosts=open(hostsFile,'a')
+            domainFile=open(dList,'r')
+            domains=domainFile.read().split('\n')
+            print(domains)
+            for i in domains:
+                if i!='':
+                    wHosts.write('\n')
+                    block='127.0.0.1 ' + i
+                    wHosts.write(block)
+                    l.log('blocked_'+i+' by file '+dList)
+            wHosts.close()
+            domainFile.close()
+        except Exception as e:
+            print(e)
+            print('File Error while reading')
+    else:
+        print("Invalid argument\nUse -h/--help to display valid options")
