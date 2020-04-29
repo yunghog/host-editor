@@ -3,6 +3,15 @@ import sys
 import os
 import config as c
 import logger as l
+banner="""
+    ██╗    ██╗███████╗██████╗       ██████╗ ██╗      ██████╗  ██████╗██╗  ██╗███████╗██████╗
+    ██║    ██║██╔════╝██╔══██╗      ██╔══██╗██║     ██╔═══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+    ██║ █╗ ██║█████╗  ██████╔╝█████╗██████╔╝██║     ██║   ██║██║     █████╔╝ █████╗  ██████╔╝
+    ██║███╗██║██╔══╝  ██╔══██╗╚════╝██╔══██╗██║     ██║   ██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+    ╚███╔███╔╝███████╗██████╔╝      ██████╔╝███████╗╚██████╔╝╚██████╗██║  ██╗███████╗██║  ██║
+    ╚══╝╚══╝ ╚══════╝╚═════╝       ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                                ---by Samartha---
+"""
 hostsFile=r'hosts.txt'
 # hostsFile=c.config()
 def searchDomain(dom):
@@ -57,9 +66,10 @@ if argc==2 :
 |                | takes domain list                             |
 +----------------+-----------------------------------------------+
                  ----------w3b13locker----------
-                    ---stable build v1.0---
+                    ---stable build v1.1---
                         --by Samartha--
 '''
+        print(banner)
         print(help)
     else:
         print('Invalid argument\nUse -h/--help to display valid options')
@@ -117,13 +127,12 @@ if argc==4:
             wHosts=open(hostsFile,'a')
             domainFile=open(dList,'r')
             domains=domainFile.read().split('\n')
-            print(domains)
             for i in domains:
                 if i!='':
                     wHosts.write('\n')
                     block='127.0.0.1 ' + i
                     wHosts.write(block)
-                    l.log('blocked_'+i+' by file '+dList)
+                    l.log('blocked_'+i+'_by_file_'+dList)
             wHosts.close()
             domainFile.close()
         except Exception as e:
