@@ -1,2 +1,0 @@
-operatingSystem|Windows
-hosts|C:\Windows\system32\drivers\etc\hosts

@@ -24,3 +24,10 @@
 # w3b13locker beta v0.3 :
   - compatible on mac os
   - working log file @ data/log.ini which holds all logs
+
+# w3b13locker stable v1.0
+  - working with files with domains list
+  - python main.py -b -f [file with domains list]
+
+# w3b13locker stable v1.1
+  - working log file when files are used 
