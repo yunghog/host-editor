@@ -12,6 +12,9 @@
 | -ub/--unblock  |   domain name    |   unblocking                        |
 | -l/--list      |   none           |   list already blocked domains      |
 | -s/--search    |   domain name    |   find out if the domain is blocked |
+| -h/--help      |   none           |   list all possible commands        |
+| -f/--file      |   file with      |   batch blocking of domains by files|
+|                | domains list     |                                     |
 +----------------+------------------+-------------------------------------+
 
 # launch the python console in administrator mode

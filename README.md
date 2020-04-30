@@ -1,6 +1,6 @@
 <a href=""><img src="image/w3b13locker.jpg" title="w3b13locker" alt="w3b13locker"></a>
 # w3bsite 13locker
-`beta build v0.3`
+`stable build v1.1`
 ### web blocker | w3b13locker | website blocker | hosts editor
 
 > Block inappropriate websites and ads by their domain
@@ -9,9 +9,9 @@
 
 > Build with python 3.7
 
-> Beta Build v0.3
+> Stable Build v1.3
 
-[![Build Status](https://img.shields.io/badge/version-v0.3-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
+[![Build Status](https://img.shields.io/badge/version-v1.1-green?style=flat-square)](https://github.com/yunghog/w3bsite13locker)
 [![Python](https://img.shields.io/badge/python-3.7-orange?style=flat-square&logo=python)](https://github.com/yunghog/w3bsite13locker)
 [![Donate](https://img.shields.io/badge/Paypal-Donate-blue?style=flat-square&logo=paypal)](https://paypal.me/samartha890?locale.x=en_GB)
 
@@ -80,6 +80,8 @@ python main.py --unblock [domain]
 | -l/--list      |   none           |   list already blocked domains      |
 | -s/--search    |   domain name    |   find out if the domain is blocked |
 | -h/--help      |   none           |   list all possible commands        |
+| -f/--file      |   file with      |   batch blocking of domains by files|
+|                | domains list     |                                     |
 +----------------+------------------+-------------------------------------+
 
 # launch the python console in administrator mode
@@ -118,7 +120,11 @@ python main.py --unblock [domain]
 # w3b13locker beta v0.3 :
   - compatible on mac os
   - working log file @ data/log.ini which holds all logs
-
+# w3b13locker stable v1.0
+  - working with files with domains list
+  - python main.py -b -f [file with domains list]
+# w3b13locker stable v1.1
+  - working log file when files are used
 ```
 ## Snapshot
 ### Sample run `main.py`
@@ -129,10 +135,6 @@ python main.py --unblock [domain]
 - [Help me to contribute more !](https://paypal.me/samartha890?locale.x=en_GB)
 
 ## Contributing
-
-> To get started...
-
-### Contribute by
   - 🍴 Fork this repo!
   - 👯 Clone this repo to your local machine using `https://github.com/yunghog/w3bsite13locker.git`
   - Pull requests
